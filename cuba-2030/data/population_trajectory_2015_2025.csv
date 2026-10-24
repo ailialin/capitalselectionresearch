@@ -1,0 +1,12 @@
+year,wdi_population_million,wdi_status,onisland_estimate_million,estimate_status,estimate_note
+2015,11.275,fetched,,,
+2016,11.266,fetched,,,
+2017,11.248,fetched,,,
+2018,11.227,fetched,,,
+2019,11.203,fetched,,,
+2020,11.176,fetched,,,
+2021,11.122,fetched,11.1,checked_secondary,stated point: pre-crisis baseline
+2022,11.06,fetched,,,
+2023,11.02,fetched,,,
+2024,10.98,fetched,,,
+2025,10.937,fetched,10.0,checked_secondary,stated point: upper bound ('under 10.0M')

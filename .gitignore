@@ -1,0 +1,26 @@
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Data and methodology only: never media, code, scripts or secrets
+*.mp4
+*.mov
+*.wav
+*.mp3
+*.aac
+*.png
+*.jpg
+*.svg
+*.tsx
+*.ts
+*.mjs
+*.js
+*.py
+*.yaml
+*.yml
+node_modules/
+video/
+script/
+audio/
+*.env*

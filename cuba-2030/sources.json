@@ -1,0 +1,619 @@
+[
+ {
+  "id": "population_exodus",
+  "kind": "on_screen_figure",
+  "beats": "B01 B02 B03",
+  "claim": "Population trajectory 2015-2025: official series vs on-island estimate",
+  "figures": {
+   "net_loss": 1100000,
+   "loss_share_pct": 10,
+   "pre_crisis_m": 11.1,
+   "on_island_m_max": 10.0
+  },
+  "on_screen_badge": "SRC: WORLD BANK WDI (UN WPP) // ONEI // ALBIZU-CAMPOS ESTIMATE [TIER 1 & 2]",
+  "source": "World Bank WDI SP.POP.TOTL (UN WPP based, fetched 2026-10-23); ONEI and Juan Carlos Albizu-Campos on-island estimate (brief)",
+  "tier": 2,
+  "status": "checked_secondary",
+  "url": "",
+  "retrieved": "2026-10-23",
+  "data_file": "data/population_trajectory_2015_2025.csv",
+  "raw_snapshot": "data/raw/worldbank/SP.POP.TOTL_CUB.json",
+  "sha256": "231682580d23bfbc9e25a5543e714f67d8830b8f85f90878b53333c7ea820e05",
+  "note": "The official international series (WDI 2025: 10.94M) shows ~-0.3M since 2018; the -1.1M (11.1M -> <10.0M) is the on-island estimate (brief, not yet checked). The chart shows both.",
+  "check": {
+   "date": "2026-10-25",
+   "result": "ONEI official effective population, as reported from ONEI statements: ~11.11M at end-2021, 10,055,968 at end-2023, 9,748,532 at end-2024 (first year below 10M). The 11.1M -> <10.0M path is the official ONEI series, so -1.1M (-10%) is a conservative reading of it (2021-2024: about -1.36M, -12%). Albizu-Campos (independent) estimates 8.62M for 2023. WDI (UN WPP) still shows 10.94M for 2025. ONEI primary tables not retrieved (site blocks downloads).",
+   "sources": [
+    "https://www.cubanet.org/regimen-admite-que-poblacion-cubana-cae-a-menos-de-10-millones-de-habitantes/",
+    "https://oncubanews.com/cuba/menos-de-10-millones-en-cuba-y-en-pleno-decrecimiento-demografico-por-la-emigracion",
+    "https://www.cubanet.org/cuba-se-vacia-solo-un-municipio-gano-poblacion-en-2024/",
+    "https://www.cubanet.org/noticias/cuba-pierde-el-18-de-su-poblacion-en-un-ano-segun-estudio/"
+   ]
+  }
+ },
+ {
+  "id": "grid_flatline",
+  "kind": "on_screen_figure",
+  "beats": "B05",
+  "claim": "National grid availability at the October 2024 collapse",
+  "figures": {
+   "available_mw_max": 400,
+   "peak_demand_mw": 3200,
+   "design_capacity_mw_min": 3000
+  },
+  "on_screen_badge": "SRC: UNE (UNIÓN ELÉCTRICA DE CUBA) OPERATIONAL BULLETINS [TIER 1]",
+  "source": "UNE (Unión Eléctrica de Cuba) operational bulletins",
+  "tier": 1,
+  "status": "checked_mixed",
+  "url": "",
+  "retrieved": "",
+  "data_file": "",
+  "raw_snapshot": "",
+  "sha256": "",
+  "note": "",
+  "check": {
+   "date": "2026-10-25",
+   "result": "Peak demand 3,200 MW confirmed: UNE forecast for 18 Oct 2024 (total disconnection at 11:07 that day). Availability in the same forecast was 1,705 MW (deficit 1,495 MW); reported peak-hour deficits were 1,641 MW (15 Oct) and 1,678 MW (17 Oct). No source found for \"under 400 MW available\". UNE: 5.87 GW installed, 3.2 GW operational (Argus), consistent with design capacity above 3,000 MW.",
+   "sources": [
+    "https://www.cubanet.org/cuba-en-apagon-total-tras-una-nueva-desconexion-del-sistema-electrico-nacional/",
+    "https://diariodecuba.com/cuba/1729347384_57868.html",
+    "https://www.argusmedia.com/en/news/2165284-cuba-in-talks-to-install-more-turkish-power-barges"
+   ]
+  }
+ },
+ {
+  "id": "thermal_fleet",
+  "kind": "on_screen_figure",
+  "beats": "B06",
+  "claim": "Generation by fuel vs peak demand; powerships and Venezuelan crude as annotations",
+  "figures": {
+   "peak_demand_mw": 3200,
+   "venezuela_crude_change_since_2020_pct": -62,
+   "available_oct_2024_mw_max": 400
+  },
+  "on_screen_badge": "SRC: EMBER YEARLY ELECTRICITY DATA // UNE BULLETINS (PEAK DEMAND) [TIER 1 & 2]",
+  "source": "Ember Yearly Electricity Data (fetched 2026-10-23); UNE bulletins (peak demand, Oct 2024 availability, peak deficit); Reuters tanker logs (Venezuelan crude)",
+  "tier": 2,
+  "status": "checked_mixed",
+  "url": "",
+  "retrieved": "2026-10-23",
+  "data_file": "data/electricity_generation_2000_2024.csv",
+  "raw_snapshot": "data/raw/ember/cuba_electricity.csv",
+  "sha256": "1f4074a6f4ebbe88173ac7f81ba6f2c523ca80468559617485ae6b06cf829e57",
+  "note": "Ember annual averages (2024: 2,218 MW) do not show steady derating; the >1,500 MW deficit is a UNE peak-hour figure, labelled as such.",
+  "check": {
+   "date": "2026-10-25",
+   "result": "Peak demand 3,200 MW confirmed (see grid_flatline). Venezuelan supply: 53,600 bpd in 2022 (tanker data, Reuters), about 27,000-31,000 bpd in 2025 (Reuters / PDVSA data, J. Pinon): roughly -45% to -50% from 2022. A 2020 baseline for -62% was not found. \"Under 400 MW available in Oct 2024\" not found.",
+   "sources": [
+    "https://oncubanews.com/en/cuba/economy/cuban-economy/has-venezuela-stopped-exporting-crude-oil-to-cuba/",
+    "https://www.cubanet.org/venezuela-sent-31000-barrels-per-day-of-fuel-to-cuba-in-july/"
+   ]
+  }
+ },
+ {
+  "id": "generation_mix",
+  "kind": "on_screen_figure",
+  "beats": "B07",
+  "claim": "Generation mix during the emergency",
+  "figures": {
+   "domestic_thermal_pct": 62,
+   "karpowership_pct": 22,
+   "distributed_pct": 16
+  },
+  "on_screen_badge": "SRC: S&P GLOBAL COMMODITY INSIGHTS [TIER 2]",
+  "source": "S&P Global Commodity Insights",
+  "tier": 2,
+  "status": "not_found",
+  "url": "",
+  "retrieved": "",
+  "data_file": "",
+  "raw_snapshot": "",
+  "sha256": "",
+  "note": "Private data used as a chart's data: DATA_POLICY §1 allows it only as labelled context.",
+  "check": {
+   "date": "2026-10-25",
+   "result": "S&P Global data is paywalled and was not checked. Public figure found: Karpowership fleet ~770 MW in early 2023, \"about one quarter\" of minimum demand (capacity, not share of generation). The 62/22/16 split was not found.",
+   "sources": [
+    "https://maritime-executive.com/article/power-ships-now-provide-about-one-quarter-of-cuba-s-electricity"
+   ]
+  }
+ },
+ {
+  "id": "tarea_ordenamiento",
+  "kind": "on_screen_figure",
+  "beats": "B09",
+  "claim": "Monetary unification, official rate fixed 1 January 2021",
+  "figures": {
+   "official_rate_cup_per_usd": 24
+  },
+  "on_screen_badge": "SRC: GACETA OFICIAL DE CUBA [TIER 1]",
+  "source": "Gaceta Oficial de la República de Cuba, Decreto-Ley 17/2020",
+  "tier": 1,
+  "status": "document",
+  "url": "",
+  "retrieved": "",
+  "data_file": "",
+  "raw_snapshot": "",
+  "sha256": "",
+  "note": "",
+  "check": {}
+ },
+ {
+  "id": "informal_fx",
+  "kind": "on_screen_figure",
+  "beats": "B10",
+  "claim": "Informal street exchange rate (CUP per USD)",
+  "figures": {
+   "purchasing_power_change_pct": -94,
+   "series": {
+    "Jan 2021": 24,
+    "Jan 2022": 72,
+    "Jan 2023": 170,
+    "Jan 2024": 280,
+    "2025-2026": 410
+   }
+  },
+  "on_screen_badge": "SRC: EL TOQUE INFORMAL RATE TRACKER [TIER 2]",
+  "source": "elTOQUE informal rate tracker",
+  "tier": 2,
+  "status": "outdated",
+  "url": "",
+  "retrieved": "",
+  "data_file": "",
+  "raw_snapshot": "",
+  "sha256": "",
+  "note": "24/410 = -94.1% of USD purchasing power: consistent with the callout. Private data as chart data (see generation_mix).",
+  "check": {
+   "date": "2026-10-25",
+   "result": "elTOQUE: the informal USD rate was ~395-398 CUP in 2024-Aug 2025 (record at the time); it reached 750 CUP in Sep and 800 CUP in Oct 2026. Against 24 CUP the loss is now about -97%, not -94%. The central bank also set a floating official rate (488 CUP in Apr 2026), so \"official rate 24\" is no longer the only official rate.",
+   "sources": [
+    "https://www.diariolasamericas.com/el-dolar-vuelve-marcar-record-cuba-al-alcanzar-los-800-pesos-el-mercado-informal-n5403799",
+    "https://www.cubanet.org/el-euro-alcanza-los-600-pesos-en-el-mercado-informal-cubano-y-marca-maximo-historico/"
+   ]
+  }
+ },
+ {
+  "id": "mlc_stores",
+  "kind": "on_screen_figure",
+  "beats": "B11",
+  "claim": "Dollar-only MLC retail and CUP salaries",
+  "figures": {},
+  "on_screen_badge": "SRC: EL TOQUE MARKET MONITOR // MINCIN REGULATIONS [TIER 1 & 2]",
+  "source": "elTOQUE market monitor; MINCIN (Ministerio del Comercio Interior) regulations",
+  "tier": 2,
+  "status": "brief_sourced",
+  "url": "",
+  "retrieved": "",
+  "data_file": "",
+  "raw_snapshot": "",
+  "sha256": "",
+  "note": "",
+  "check": {}
+ },
+ {
+  "id": "surgeon_payslip",
+  "kind": "on_screen_figure",
+  "beats": "B12",
+  "claim": "Senior surgeon monthly salary vs staple prices (Havana)",
+  "figures": {
+   "salary_cup": 4800,
+   "salary_usd": 12,
+   "eggs_30_cup": 3200,
+   "milk_powder_kg_cup": 2000,
+   "cooking_oil_l_cup": 1000,
+   "basket_cup": 6200,
+   "net_cup": -1400
+  },
+  "on_screen_badge": "SRC: ONEI ANUARIO ESTADÍSTICO (WAGES) // EL TOQUE IPC [TIER 1 & 2]",
+  "source": "ONEI Anuario Estadístico (wages); elTOQUE price index (IPC)",
+  "tier": 2,
+  "status": "checked_mixed",
+  "url": "",
+  "retrieved": "",
+  "data_file": "",
+  "raw_snapshot": "",
+  "sha256": "",
+  "note": "Arithmetic: 3,200 + 2,000 + 1,000 = 6,200 CUP = 129% of 4,800; 4,800 - 6,200 = -1,400 CUP = -29%. Consistent.",
+  "check": {
+   "date": "2026-10-25",
+   "result": "Eggs: a 30-egg carton at about 3,200 CUP (Diario de Cuba; another list 3,000). Milk powder: 900 g at 1,650 CUP (~1,830 CUP/kg). A specialist doctor earns 5,560 CUP plus seniority supplements (Cubanet), so 4,800 CUP is below a senior surgeon's salary; ONEI average wage 2024: 4,648 CUP. Cooking oil not checked. At today's ~800 CUP/USD, 4,800 CUP is about $6, not $12.",
+   "sources": [
+    "https://diariodecuba.com/cuba/1767445359_64640.html",
+    "https://www.directoriocubano.info/noticias/publican-lista-actualizada-de-los-precios-en-cuba-asi-estan-los-alimentos-en-los-mercados-de-la-isla-lista-completa/",
+    "https://www.cubanet.org/aumentan-salarios-a-maestros-y-medicos-hay-que-estabilizar-la-fuerza-laboral/"
+   ]
+  }
+ },
+ {
+  "id": "monetary_decay",
+  "kind": "on_screen_figure",
+  "beats": "B13",
+  "claim": "Stages of monetary decay (framework)",
+  "figures": {},
+  "on_screen_badge": "SRC: MACRO SYNTHESIS // AUSTRIAN MONETARY MODEL [TIER 3]",
+  "source": "Capital Selection synthesis; Austrian monetary model",
+  "tier": 3,
+  "status": "synthesis",
+  "url": "",
+  "retrieved": "",
+  "data_file": "",
+  "raw_snapshot": "",
+  "sha256": "",
+  "note": "",
+  "check": {}
+ },
+ {
+  "id": "resource_endowment",
+  "kind": "on_screen_figure",
+  "beats": "B14",
+  "claim": "Raw sugar production 1961-2023 vs domestic consumption; nickel & cobalt dossier",
+  "figures": {
+   "consumption_mt": 0.4
+  },
+  "on_screen_badge": "SRC: FAOSTAT (QCL) // USGS MINERAL COMMODITY SUMMARIES [TIER 1]",
+  "source": "FAOSTAT QCL raw cane sugar (fetched 2026-10-23); USGS Mineral Commodity Summaries (nickel, cobalt); consumption baseline and net-importer year from the brief",
+  "tier": 1,
+  "status": "contradicted",
+  "url": "",
+  "retrieved": "2026-10-23",
+  "data_file": "data/sugar_harvest_collapse_1961_2023.csv",
+  "raw_snapshot": "data/raw/faostat/cuba_sugar_production.csv",
+  "sha256": "5911d09aef1956945be9ecf26eef1891ae46ea506fc401e4ab1a4d603b482796",
+  "note": "FAOSTAT: 8.43 Mt (1970) -> 0.30 Mt (2023) = -96.5%. FAOSTAT starts in 1961 (spec asked for 1953). Production first falls below 0.4 Mt in 2023; the 2022 label is the brief's net-importer year.",
+  "check": {
+   "date": "2026-10-25",
+   "result": "USGS Mineral Commodity Summaries 2026: cobalt reserves Cuba 500,000 t, 5th after Congo (Kinshasa), Australia, Russia, Indonesia (top 5: confirmed). Nickel: Cuba is not listed individually (inside \"Other countries\"); the \"top 5\" ranking holds only for the 2021 edition. National-consumption sugar: the 2022 plan allotted 500,000 t (reported), not 400,000 t. First year as a net importer (2022) not confirmed.",
+   "sources": [
+    "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-cobalt.pdf",
+    "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-nickel.pdf",
+    "https://oncubanews.com/cuba/economia/la-amarga-crisis-del-azucar"
+   ]
+  }
+ },
+ {
+  "id": "torre_k",
+  "kind": "on_screen_figure",
+  "beats": "B15",
+  "claim": "Torre K23 capex and occupancy",
+  "figures": {
+   "capex_usd_m_min": 500,
+   "occupancy_pct_max": 15
+  },
+  "on_screen_badge": "SRC: ONEI TURISMO REPORT // REUTERS INVESTIGATION [TIER 2]",
+  "source": "ONEI tourism report; Reuters investigation",
+  "tier": 2,
+  "status": "not_found",
+  "url": "",
+  "retrieved": "",
+  "data_file": "",
+  "raw_snapshot": "",
+  "sha256": "",
+  "note": "",
+  "check": {
+   "date": "2026-10-25",
+   "result": "No published construction cost or occupancy rate found. The tower opened in February 2025 (154 m, 44 floors, 500+ rooms); press describes it as largely empty, without a figure.",
+   "sources": [
+    "https://www.cubanet.org/torre-k-tendra-44-pisos-y-mas-de-500-habitaciones/"
+   ]
+  }
+ },
+ {
+  "id": "investment_by_activity",
+  "kind": "on_screen_figure",
+  "beats": "B16",
+  "claim": "Investment by economic activity, 2020-2024 average",
+  "figures": {
+   "hotels_real_estate_pct": 35.6,
+   "manufacturing_energy_pct": 10.4,
+   "agriculture_pct": 2.8,
+   "health_social_pct": 1.6
+  },
+  "on_screen_badge": "SRC: ONEI ANUARIO ESTADÍSTICO DE CUBA [TIER 1]",
+  "source": "ONEI, Anuario Estadístico de Cuba",
+  "tier": 1,
+  "status": "checked_mixed",
+  "url": "",
+  "retrieved": "",
+  "data_file": "data/capital_investment_allocation_onei.csv",
+  "raw_snapshot": "",
+  "sha256": "",
+  "note": "",
+  "check": {
+   "date": "2026-10-25",
+   "result": "ONEI \"Indicadores seleccionados: Inversiones, diciembre 2024\" (as quoted by EFE, IPS and the search index; the PDF could not be downloaded): total 96,622.0 (2023) / 98,569.5 (2024) M CUP; hotels & restaurants 8,626.4 / 11,936.5 (8.9% / 12.1%); business services, real estate & rental 24.6% / 25.3%; combined 33.5% / 37.4%; agriculture 2,966.7 / 2,671.4 (3.1% / 2.7%); health & social assistance 1,770.8 / 1,977.4 (1.8% / 2.0%). The 2023-24 mean of the combined share is ~35.5%, close to 35.6%, but 2020-2022 were not retrieved, so the 2020-2024 average is unconfirmed. Manufacturing & energy not checked. ONEI does not attribute investment to GAESA: that label is the channel's.",
+   "sources": [
+    "http://www.onei.gob.cu/sites/default/files/publicaciones/2025-03/inversiones-diciembre-2024.pdf",
+    "https://www.swissinfo.ch/spa/cuba-invirti%C3%B3-en-2024-mucho-m%C3%A1s-en-turismo-y-hosteler%C3%ADa-que-en-educaci%C3%B3n-y-sanidad/89059437",
+    "https://www.martinoticias.com/a/mas-turismo-y-menos-salud-asi-fueron-las-las-inversiones-del-primer-semestre-de-2024-en-cuba/397788.html"
+   ]
+  }
+ },
+ {
+  "id": "mipymes_decree",
+  "kind": "on_screen_figure",
+  "beats": "B18",
+  "claim": "Decreto-Ley 46/2021 and registered MIPYMES",
+  "figures": {
+   "registered_entities_min": 11500
+  },
+  "on_screen_badge": "SRC: MINISTERIO DE ECONOMÍA (MEP) // US-CUBA TRADE COUNCIL [TIER 1 & 2]",
+  "source": "Ministerio de Economía y Planificación (MEP); US-Cuba Trade and Economic Council",
+  "tier": 2,
+  "status": "checked_mixed",
+  "url": "",
+  "retrieved": "",
+  "data_file": "",
+  "raw_snapshot": "",
+  "sha256": "",
+  "note": "",
+  "check": {
+   "date": "2026-10-25",
+   "result": "MEP: 11,046 private MIPYMES approved since 2021 (July 2024; MEP stopped weekly updates in early 2025). ONEI: 9,236 registered and active at end-2024. \"Over 11,500\" not found in an official source.",
+   "sources": [
+    "https://www.swissinfo.ch/spa/las-pymes-privadas-aprobadas-en-cuba-desde-2021-superan-las-11.000%2C-seg%C3%BAn-el-gobierno/84144338",
+    "https://www.cubanet.org/cuba-cae-por-primera-vez-el-numero-de-mipymes-privadas/"
+   ]
+  }
+ },
+ {
+  "id": "mipymes_trade",
+  "kind": "on_screen_figure",
+  "beats": "B19",
+  "claim": "Private-sector food imports",
+  "figures": {
+   "private_trade_usd_bn_min": 1.2
+  },
+  "on_screen_badge": "SRC: US-CUBA TRADE & ECONOMIC COUNCIL // PORT EVERGLADES LOGS [TIER 2]",
+  "source": "US-Cuba Trade and Economic Council; Port Everglades shipping logs",
+  "tier": 2,
+  "status": "not_found",
+  "url": "",
+  "retrieved": "",
+  "data_file": "",
+  "raw_snapshot": "",
+  "sha256": "",
+  "note": "",
+  "check": {
+   "date": "2026-10-25",
+   "result": "US-Cuba Trade and Economic Council: US food and agricultural exports to Cuba ~$342.6M in 2023 plus ~$24M other; no source found for $1.2bn of private trade.",
+   "sources": [
+    "https://www.cpapracticeadvisor.com/2024/02/14/u-s-exports-to-cuba-increased-in-2023/101676/"
+   ]
+  }
+ },
+ {
+  "id": "remittances",
+  "kind": "on_screen_figure",
+  "beats": "B20",
+  "claim": "Estimated annual remittances",
+  "figures": {
+   "usd_bn": 2.5,
+   "share_of_state_exports_pct_min": 125
+  },
+  "on_screen_badge": "SRC: HAVANA CONSULTING GROUP // DIASPORA AUDIT [TIER 2]",
+  "source": "The Havana Consulting Group",
+  "tier": 2,
+  "status": "contradicted",
+  "url": "",
+  "retrieved": "",
+  "data_file": "",
+  "raw_snapshot": "",
+  "sha256": "",
+  "note": "",
+  "check": {
+   "date": "2026-10-25",
+   "result": "The Havana Consulting Group: $2,040M in 2022 (and $1,084M in 2021); independent estimates for recent years are $1.8-2.1bn. No source for $2.5bn; the 125%-of-exports ratio was not checked.",
+   "sources": [
+    "https://www.directoriocubano.info/?p=131089",
+    "https://eldinero.com.do/349922/remesas-turismo-petroleo-y-medicos-ee-uu-ahoga-las-fuentes-de-divisas-de-cuba/"
+   ]
+  }
+ },
+ {
+  "id": "crypto_rail",
+  "kind": "on_screen_figure",
+  "beats": "B21",
+  "claim": "USDT/Tron peer-to-peer remittance rail",
+  "figures": {},
+  "on_screen_badge": "SRC: CHAINALYSIS LATAM REPORT // P2P ORDERBOOKS [TIER 2]",
+  "source": "Chainalysis Latin America report; P2P exchange order books",
+  "tier": 2,
+  "status": "brief_sourced",
+  "url": "",
+  "retrieved": "",
+  "data_file": "",
+  "raw_snapshot": "",
+  "sha256": "",
+  "note": "",
+  "check": {}
+ },
+ {
+  "id": "dependency_2030",
+  "kind": "on_screen_figure",
+  "beats": "B22",
+  "claim": "2030 dependency projection",
+  "figures": {
+   "working_age_change_pct": -22,
+   "dependents_per_worker": 1.8
+  },
+  "on_screen_badge": "SRC: ONEI DEMOGRAPHIC PROJECTIONS // UN ECLAC [TIER 1]",
+  "source": "ONEI demographic projections; UN ECLAC (CELADE)",
+  "tier": 1,
+  "status": "not_found",
+  "url": "",
+  "retrieved": "",
+  "data_file": "",
+  "raw_snapshot": "",
+  "sha256": "",
+  "note": "",
+  "check": {
+   "date": "2026-10-25",
+   "result": "No ONEI/CEPDE or CELADE projection with -22% working-age population by 2030 found; the 2015 CEPDE projection had the working-age group shrinking by ~133,000 by 2030. \"1.8 dependents per worker\" does not match any published dependency ratio found; the on-screen pyramid is illustrative (WIDGET_CATALOG).",
+   "sources": [
+    "https://oncubanews.com/wp-content/uploads/2023/04/proyecciones_de_poblacion_2015_2050.pdf"
+   ]
+  }
+ },
+ {
+  "id": "grid_recap",
+  "kind": "on_screen_figure",
+  "beats": "B23",
+  "claim": "Grid recapitalization need and turbine lifespan",
+  "figures": {
+   "recap_usd_bn": 8.2,
+   "lifespan_limit_year": 2028,
+   "state_capex_usd": 0
+  },
+  "on_screen_badge": "SRC: UNE INFRASTRUCTURE AUDIT // EIU ESTIMATES [TIER 2]",
+  "source": "UNE infrastructure audit; Economist Intelligence Unit (EIU) estimates",
+  "tier": 2,
+  "status": "checked_mixed",
+  "url": "",
+  "retrieved": "",
+  "data_file": "",
+  "raw_snapshot": "",
+  "sha256": "",
+  "note": "",
+  "check": {
+   "date": "2026-10-25",
+   "result": "Order of magnitude supported, attribution not: Jorge Pinon (UT Austin) estimates up to $8bn (8-10bn in his 2023 briefing); Cuba Study Group (Mar 2026) at least $6.6bn for generation alone. No \"UNE infrastructure audit\" with $8.2bn found. Lifespan 2028 and zero state capex not checked.",
+   "sources": [
+    "https://cri.fiu.edu/_assets/docs/pinon-briefing-on-cuba-2023.pdf",
+    "https://cubastudygroup.org/white_papers/without-power-there-is-no-country-a-special-report-on-cubas-electricity-generation-crisis/"
+   ]
+  }
+ },
+ {
+  "id": "enclave_split",
+  "kind": "on_screen_figure",
+  "beats": "B24",
+  "claim": "2030 bifurcation sketch",
+  "figures": {
+   "blackout_hours_per_day": 18
+  },
+  "on_screen_badge": "SRC: MACRO SYNTHESIS // GAESA CORPORATE STRUCTURE [TIER 3]",
+  "source": "Capital Selection synthesis; GAESA corporate structure (public reporting)",
+  "tier": 3,
+  "status": "brief_sourced",
+  "url": "",
+  "retrieved": "",
+  "data_file": "",
+  "raw_snapshot": "",
+  "sha256": "",
+  "note": "18h daily blackouts is a figure, not synthesis: it needs a named source (e.g. UNE bulletins).",
+  "check": {}
+ },
+ {
+  "id": "global_spillover",
+  "kind": "on_screen_figure",
+  "beats": "B25",
+  "claim": "Global spillover: straits trade share, Bejucal SIGINT, Moa nickel/cobalt",
+  "figures": {
+   "us_export_share_via_straits_pct_min": 50,
+   "miles_from_florida": 90
+  },
+  "on_screen_badge": "SRC: US EIA // USDA MARITIME LOGS // CSIS GEOPOLITICAL BRIEF [TIER 1 & 2]",
+  "source": "US EIA (energy exports); USDA maritime export logs; CSIS geopolitical brief",
+  "tier": 2,
+  "status": "brief_sourced",
+  "url": "",
+  "retrieved": "",
+  "data_file": "",
+  "raw_snapshot": "",
+  "sha256": "",
+  "note": ">50% of US grain/LNG/crude exports via the straits: record the EIA and USDA series used to compute the share.",
+  "check": {}
+ },
+ {
+  "id": "scenarios",
+  "kind": "on_screen_figure",
+  "beats": "B26",
+  "claim": "Three 2030 scenarios and prediction-market price of a regime shift",
+  "figures": {
+   "probability_pct_max": 8
+  },
+  "on_screen_badge": "SRC: MACRO SYNTHESIS // POLYMARKET CONTRACTS [TIER 3]",
+  "source": "Capital Selection synthesis; Polymarket contracts",
+  "tier": 3,
+  "status": "brief_sourced",
+  "url": "",
+  "retrieved": "",
+  "data_file": "",
+  "raw_snapshot": "",
+  "sha256": "",
+  "note": "Polymarket contract and price date still to be recorded before publishing.",
+  "check": {}
+ },
+ {
+  "id": "takeaways",
+  "kind": "on_screen_figure",
+  "beats": "B27",
+  "claim": "Channel takeaways",
+  "figures": {},
+  "on_screen_badge": "SRC: CAPITAL SELECTION FRAMEWORK [TIER 3]",
+  "source": "Capital Selection framework",
+  "tier": 3,
+  "status": "synthesis",
+  "url": "",
+  "retrieved": "",
+  "data_file": "",
+  "raw_snapshot": "",
+  "sha256": "",
+  "note": "",
+  "check": {}
+ },
+ {
+  "id": "population_wdi",
+  "kind": "dataset",
+  "beats": "B01 B02 B03",
+  "claim": "Population, total (World Bank WDI, UN WPP based)",
+  "figures": {},
+  "on_screen_badge": "",
+  "source": "World Bank, World Development Indicators (SP.POP.TOTL), based on UN World Population Prospects",
+  "tier": 1,
+  "status": "fetched",
+  "url": "https://api.worldbank.org/v2/country/CUB/indicator/SP.POP.TOTL?format=json&date=2010:2025&per_page=50",
+  "retrieved": "2026-10-23",
+  "data_file": "data/population_trajectory_2015_2025.csv",
+  "raw_snapshot": "data/raw/worldbank/SP.POP.TOTL_CUB.json",
+  "sha256": "231682580d23bfbc9e25a5543e714f67d8830b8f85f90878b53333c7ea820e05",
+  "note": "sha256 of the full download: 231682580d23bfbc9e25a5543e714f67d8830b8f85f90878b53333c7ea820e05",
+  "check": {}
+ },
+ {
+  "id": "sugar_raw_production",
+  "kind": "dataset",
+  "beats": "B14",
+  "claim": "Raw cane sugar production, centrifugal (FAOSTAT QCL)",
+  "figures": {},
+  "on_screen_badge": "",
+  "source": "FAO, FAOSTAT Crops and livestock products (QCL), item 'Raw cane or beet sugar (centrifugal only)'",
+  "tier": 1,
+  "status": "fetched",
+  "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_Americas.zip",
+  "retrieved": "2026-10-23",
+  "data_file": "data/sugar_harvest_collapse_1961_2023.csv",
+  "raw_snapshot": "data/raw/faostat/cuba_sugar_production.csv",
+  "sha256": "5911d09aef1956945be9ecf26eef1891ae46ea506fc401e4ab1a4d603b482796",
+  "note": "sha256 of the full download: 9381681eb43c3e74b330c7a8aea72a4321436a24e884914248ff82952c3cc3dc",
+  "check": {}
+ },
+ {
+  "id": "generation_by_fuel",
+  "kind": "dataset",
+  "beats": "B06",
+  "claim": "Electricity generation by fuel, annual average output",
+  "figures": {},
+  "on_screen_badge": "",
+  "source": "Ember, Yearly Electricity Data (CC BY 4.0)",
+  "tier": 2,
+  "status": "fetched",
+  "url": "https://storage.googleapis.com/emb-prod-bkt-publicdata/public-downloads/yearly_full_release_long_format.csv",
+  "retrieved": "2026-10-23",
+  "data_file": "data/electricity_generation_2000_2024.csv",
+  "raw_snapshot": "data/raw/ember/cuba_electricity.csv",
+  "sha256": "1f4074a6f4ebbe88173ac7f81ba6f2c523ca80468559617485ae6b06cf829e57",
+  "note": "sha256 of the full download: 259e1095ee8ffeaf0aff37ad557916ae1823a2da13312da50ba4cec6b4574c3b. Annual averages: they do not show peak-hour deficits or outage days.",
+  "check": {}
+ }
+]

@@ -1,0 +1,6 @@
+category,share_of_total_investment_pct,source,status
+Hotels & real estate (GAESA),35.6,"ONEI, Anuario Estadístico de Cuba",checked_mixed
+Manufacturing & energy,10.4,"ONEI, Anuario Estadístico de Cuba",checked_mixed
+Agriculture & food,2.8,"ONEI, Anuario Estadístico de Cuba",checked_mixed
+Public health & social services,1.6,"ONEI, Anuario Estadístico de Cuba",checked_mixed
+All other activities (remainder),49.6,computed: 100 minus the named shares,computed

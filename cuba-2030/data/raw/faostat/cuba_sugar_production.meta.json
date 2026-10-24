@@ -1,0 +1,7 @@
+{
+ "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_Americas.zip",
+ "retrieved": "2026-10-23T16:33:30+00:00",
+ "sha256_full_download": "9381681eb43c3e74b330c7a8aea72a4321436a24e884914248ff82952c3cc3dc",
+ "extract": "Area=Cuba, Item contains 'ugar', Element=Production",
+ "member": "Production_Crops_Livestock_E_Americas.csv"
+}

@@ -1,0 +1,7 @@
+{
+ "url": "https://storage.googleapis.com/emb-prod-bkt-publicdata/public-downloads/yearly_full_release_long_format.csv",
+ "retrieved": "2026-10-23T16:33:30+00:00",
+ "sha256_full_download": "259e1095ee8ffeaf0aff37ad557916ae1823a2da13312da50ba4cec6b4574c3b",
+ "extract": "Area=Cuba",
+ "licence": "CC BY 4.0 (Ember)"
+}
